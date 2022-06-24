@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>General Categorical Simulator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="js/categorical.js"></script>
+  </head>
+  <body> 
+    <a href="index.html">Home</a>
+    <h1>General Categorical Simulator</h1>
+
+    <form name="histoform" onsubmit="return main()">
+      <label>Outcome 1 in deck: </label>
+      <input type="number" name="numOutcome1" value="" />
+      <br />
+      <label>Outcome 2 in deck: </label>
+      <input type="number" name="numOutcome2" value="" />
+      <br />
+      <label>Total number in condition 1: </label>
+      <input type="number" name="numPile1" value="" />
+      <br />
+      <label>Threshold (number of outcome 1 in condition 1): </label>
+      <input type="number" name="threshold" value="" step="1" />
+      <br />
+      <label>Number of simulations to run: </label>
+      <input type="number" name="simulations" value="1000" />
+      <br />
+      <input type="submit" value="Build Histogram">
+
+    </form>  
+    
+    <div id="rawdata"></div> 
+    <div id="plot"></div>
+    <div id="thresholdNum"></div>
+    
+  </body>
+</html>

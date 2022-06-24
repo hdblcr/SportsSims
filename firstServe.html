@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>First Serve Simulator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="js/firstServe.js"></script>
+  </head>
+  <body> 
+    <a href="index.html">Home</a>
+    <h1>First Serve Simulator</h1>
+    <p>Does Serena Williams win more when she serves first?</p>
+
+    <table>
+      <tr>
+        <th></th>
+        <th>Made</th>
+        <th>Missed</th>
+        <th>Total</th>
+      </tr>
+      <tr>
+        <th>Won</th>
+        <td>29</td>
+        <td>11</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <th>Lost</th>
+        <td>8</td>
+        <td>20</td>
+        <td>28</td>
+      </tr>
+      <tr>
+        <th>Total</th>
+        <td>37</td>
+        <td>31</td>
+        <td>68</td>
+      </tr>
+    </table>
+
+    <form name="histoform" onsubmit="return main()">
+      <label>Wins in deck: </label>
+      <input type="number" name="numWins" value="40" />
+      <br />
+      <label>Losses in deck: </label>
+      <input type="number" name="numLosses" value="28" />
+      <br />
+      <label>Number in pile 1: </label>
+      <input type="number" name="numPile1" value="37" />
+      <br />
+      <label>Threshold wins in pile 1: </label>
+      <input type="number" name="threshold" value="29" step="1" />
+      <br />
+      <label>Number of simulations: </label>
+      <input type="number" name="simulations" value="1000" />
+      <br />
+      <input type="submit" value="Build Histogram">
+
+    </form>   
+    <div id="plot"></div>
+    <div id="thresholdNum"></div>
+    <div id="rawdata"></div>
+  </body>
+</html>

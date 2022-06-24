@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tennis Surface Simulator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="js/tennisSurface.js"></script>
+  </head>
+  <body> 
+    <a href="index.html">Home</a>
+    <h1>Tennis Surface Simulator</h1>
+
+    <form name="histoform" onsubmit="return main()">
+      <label>Player: </label>
+      <input type="text" name="player"  value=""/>
+      <br />
+      <label>Surface: </label>
+      <input type="text" name = "surface" value=""/>
+      <br />
+      <label>Total wins: </label>
+      <input type="number" name="numOutcome1" value="" />
+      <br />
+      <label>Total losses: </label>
+      <input type="number" name="numOutcome2" value="" />
+      <br />
+      <label>Games played on surface: </label>
+      <input type="number" name="numPile1" value="" />
+      <br />
+      <label>Wins (or losses) on surface: </label>
+      <input type="number" name="threshold" value="" step="1" />
+      <br />
+      <label>Number of simulations to run: </label>
+      <input type="number" name="simulations" value="1000" />
+      <br />
+      <input type="submit" value="Build Histogram">
+
+    </form>   
+    <div id="plot"></div>
+    <div id="thresholdNum"></div>
+    <div id="rawdata"></div>
+  </body>
+</html>
